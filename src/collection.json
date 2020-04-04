@@ -1,0 +1,10 @@
+{
+  "$schema": "../node_modules/@angular-devkit/schematics/collection-schema.json",
+  "schematics": {
+    "container": {
+      "description": "A MVP schematic.",
+      "factory": "./container/index",
+      "schema": "./container/schema.json"
+    }
+  }
+}

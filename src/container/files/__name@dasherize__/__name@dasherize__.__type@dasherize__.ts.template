@@ -1,0 +1,15 @@
+import { Component, ChangeDetectionStrategy } from '@angular/core';<% if(presenter) { %>
+import { <%= classify(name) %>Presenter } from './<%= dasherize(name) %>.presenter';<% } %>
+
+@Component({
+  selector: '<%= selector %>-ui',
+  templateUrl: './<%= dasherize(name) %>.component.html',
+  styleUrls: ['./<%= dasherize(name) %>.component.<%= style %>'],<% if(presenter) { %>
+  providers: [<%= classify(name) %>Presenter],<% } %>
+  changeDetection: ChangeDetectionStrategy.OnPush
+})
+export class <%= classify(name) %>Component {
+
+  constructor(<% if(presenter) { %>private presenter: <%= classify(name) %>Presenter<% } %>) { }
+
+}
