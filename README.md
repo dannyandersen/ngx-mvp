@@ -6,8 +6,10 @@ https://indepth.dev/model-view-presenter-with-angular/
 
 ### Install
 
+This should be installed in devDependencies to make sure it is not distributed with your application.
+
 ```bash
-npm i ng-mvp
+npm install ng-mvp --save-dev
 ```
 
 ### How to use it

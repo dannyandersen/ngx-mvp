@@ -1,16 +1,22 @@
 {
   "name": "ng-mvp",
-  "version": "0.0.1",
-  "description": "MVP schematics",
+  "version": "0.0.2",
+  "description": "Model-View-Presenter schematics for Angular",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dannyandersen/ng-mvp.git"
+  },
   "scripts": {
     "build": "tsc -p tsconfig.json",
     "build:watch": "tsc -p tsconfig.json --watch",
     "test": "npm run build && jasmine src/**/*_spec.js"
   },
   "keywords": [
-    "schematics"
+    "schematics",
+    "angular",
+    "model-view-presenter"
   ],
-  "author": "",
+  "author": "Danny Andersen",
   "license": "MIT",
   "schematics": "./src/collection.json",
   "dependencies": {
