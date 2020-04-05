@@ -19,12 +19,12 @@ Once installed, you can generate code in the same way you use `ng generate compo
 This is how you generate 
 
 ```bash
-np generate ng-mvp:container your-component
+ng generate ng-mvp:container your-component
 ```
 
 To add a presenter simply add the `--presenter` parameter.
 
 ```bash
-np generate ng-mvp:container your-component --presenter
+ng generate ng-mvp:container your-component --presenter
 ```
  
