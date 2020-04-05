@@ -9,7 +9,7 @@ https://indepth.dev/model-view-presenter-with-angular/
 This should be installed in devDependencies to make sure it is not distributed with your application.
 
 ```bash
-npm install ng-mvp --save-dev
+npm install ngx-mvp --save-dev
 ```
 
 ### How to use it
@@ -19,12 +19,12 @@ Once installed, you can generate code in the same way you use `ng generate compo
 This is how you generate 
 
 ```bash
-ng generate ng-mvp:container your-component
+ng generate ngx-mvp:container your-component
 ```
 
 To add a presenter simply add the `--presenter` parameter.
 
 ```bash
-ng generate ng-mvp:container your-component --presenter
+ng generate ngx-mvp:container your-component --presenter
 ```
  
