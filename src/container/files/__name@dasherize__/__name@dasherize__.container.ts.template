@@ -4,7 +4,7 @@ import { Component, OnInit } from '@angular/core';
   selector: '<%= selector %>',
   template: `<<%= selector %>-ui></<%= selector %>-ui>`,
 })
-export class <%= classify(name) %>Container implements OnInit {
+export class <%= classify(name) %>ContainerComponent implements OnInit {
 
   constructor() { }
 

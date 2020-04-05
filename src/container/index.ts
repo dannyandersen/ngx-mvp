@@ -21,7 +21,7 @@ function readIntoSourceFile(host: Tree, modulePath: string): ts.SourceFile {
 function addDeclarationToNgModule(options: Schema, type?: string): Rule {
     return (host: Tree) => {
         
-        type = !type ? 'Component': type;
+        type = !type ? 'Component' : type;
         
         const modulePath = options.module as string;
         const source = readIntoSourceFile(host, modulePath);
@@ -30,7 +30,7 @@ function addDeclarationToNgModule(options: Schema, type?: string): Rule {
             + strings.dasherize(options.name) + '/'
             + strings.dasherize(options.name)
             + (options.type ? '.' : '')
-            + strings.dasherize(type);
+            + (type === 'ContainerComponent' ? 'container' : strings.dasherize(type));
         const relativePath = buildRelativePath(modulePath, componentPath);
         const classifiedName = strings.classify(options.name) + strings.classify(type);
         const declarationChanges = addDeclarationToModule(
@@ -96,7 +96,7 @@ export default function (options: Schema): Rule {
         ]);
 
         return chain([
-            addDeclarationToNgModule(options, 'Container'),
+            addDeclarationToNgModule(options, 'ContainerComponent'),
             addDeclarationToNgModule(options),
             mergeWith(templateSource),
         ]);
